@@ -1,24 +1,51 @@
 # 🏥 Hospital Food Waste Analytics – Power BI Case Study
+![Power BI](https://img.shields.io/badge/PowerBI-Analytics-F2C811?logo=powerbi&logoColor=black)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Dataset](https://img.shields.io/badge/Dataset-Synthetic-blue)
 
-A complete analytics project exploring food & dairy waste in a 12-bed hospital ward.  
-The goal is to identify waste patterns, understand operational drivers, and demonstrate how dynamic meal ordering can reduce waste by approximately **20%**.
+This project addresses the operational mismatch between patient occupancy and meal procurement in a 12-bed hospital ward.  
+By transitioning from a **static ordering system** to a **dynamic, data-driven procurement model**, the analysis demonstrates a potential **20% reduction in food waste** and notable yearly cost savings.
 
+---
+
+## 📌 Table of Contents
+- [Business Problem](#-business-problem)
+- [Dataset (Synthetic but Realistic)](#-dataset-synthetic-but-realistic)
+- [Key Metrics (DAX)](#-key-metrics-dax)
+- [Dashboard Highlights](#-dashboard-highlights)
+  - [Executive Summary View](#1️⃣-executive-summary-view)
+  - [Operational Analysis View](#2️⃣-operational-analysis-view)
+- [Strategic Insights](#-strategic-insights)
+- [Tools Used](#-tools-used)
+- [Repository Structure](#-repository-structure)
+- [Resume-Ready Description](#-resume-ready-description)
+
+---
 
 ## 🔍 Business Problem
 
-The ward operates with a maximum capacity of 12 beds.  
-Patient count changes daily (admissions, discharges, NPO status, diet changes),  
-but **meal and dairy orders were fixed and not adjusted**.
+The ward previously operated on **fixed daily meal orders**, regardless of real patient volume.
 
-This mismatch created:
+Daily fluctuations in:
+- Admissions  
+- Discharges  
+- NPO status (“Nothing by Mouth”)  
+- Diet / clinical changes  
 
-- Overproduction of meals  
-- Avoidable food waste  
-- Unnecessary cost in DKK  
-- Operational inefficiency  
+…were **not** reflected in kitchen orders.
 
+This led to:
 
+### ❌ Financial Leakage  
+Significant annual waste cost in DKK (≈18,000 DKK avoidable).
 
+### ❌ Operational Rigidity  
+No ability to scale meals according to demand.
+
+### ❌ Sustainability Gaps  
+High volume of avoidable organic waste (meals + dairy).
+
+---
 ## 📁 Dataset (Synthetic but Realistic)
 
 The dataset simulates the ward’s daily operations:
@@ -31,41 +58,58 @@ The dataset simulates the ward’s daily operations:
 
 All data files are included in the `/data` folder.
 
-
+---
 
 ## 📊 Key Metrics (DAX)
 
-### Waste Percentage Measures
-- **FoodWastePct** = Meals_Wasted / Meals_Ordered  
-- **DairyWastePct** = Dairy_Wasted / Dairy_Ordered  
+| Metric | Logic | Purpose |
+|--------|--------|---------|
+| **Waste %** | `DIVIDE([Total Wasted], [Total Ordered])` | Tracks procurement efficiency |
+| **Optimization Gap** | `[Current Cost] - [Dynamic Model Cost]` | Measures potential savings |
+| **Patient Density** | `AVERAGE(Patients_Current)` | Identifies patterns of demand |
 
-### Recommended Ordering Model  
-A dynamic ordering model based on patient count to reduce waste.
+---
 
+## 📈 Dashboard Highlights
 
-## 📊 Power BI Dashboards
+### **1️⃣ Executive Summary View**
+High-level KPIs showing **Current State vs Optimized State**, focused on ROI and savings potential.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f20ced3d-9eaf-4adb-a399-d34c7af29a93" width="750" alt="Summary View">
+</p>
 
-## 📈 Summary View 
+---
 
-A high-level overview of key waste KPIs, comparing the current fixed-order system with the optimized dynamic model. <img src="https://github.com/user-attachments/assets/f20ced3d-9eaf-4adb-a399-d34c7af29a93" />
+### **2️⃣ Operational Analysis View**
+A deep dive into daily waste trends, cost drivers, and monthly patterns.  
+Provides actionable insights for ward managers and kitchen operations.
 
-## 📊 Analysis View  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f07b18cc-0fd2-4451-a76e-f4ba3b5e4a99" width="750" alt="Analysis View">
+</p>
 
-A detailed breakdown of daily food waste trends, cost drivers, and monthly waste patterns.  
-This view highlights operational inefficiencies and identifies the primary source of avoidable waste.
+---
 
-<img src="https://github.com/user-attachments/assets/e88deeb1-930f-4774-bf08-40285c2dd9f0" />
+## 🎯 Strategic Insights
 
+### 🔺 The “Fixed Order” Trap
+- **85%** of waste comes from **overproduction**  
+- Annual avoidable cost: **~18,000 DKK**
 
-## 🎯 Insights
+### 📉 Consistency of Waste
+- Monthly waste ≈ **7,000 DKK**  
+- Problem is **systemic**, not seasonal
 
-- Overproduction is the main waste driver (~18K DKK).  
-- Monthly waste cost is stable (~7K DKK/month).  
-- Optimized ordering reduces waste by **13–20%**.  
-- Clear opportunity for operational improvement.  
+### 🚀 Optimization Impact
+Implementing a dynamic ordering model:  
+`Adjusted Orders = Current Patients + 10% Buffer`
 
+Results in:
+- **13–20% reduction in waste**  
+- Clear operational and financial gains  
 
+---
 
 ## 🛠 Tools Used
 
@@ -74,7 +118,26 @@ This view highlights operational inefficiencies and identifies the primary sourc
 - Excel  
 - GitHub  
 
+---
+
+## 📁 Repository Structure
+
+```
+Hospital-Food-Waste-Analytics/
+├── data/       # CSV / Excel datasets
+├── pbix/       # Power BI report file (.pbix / .pbit)
+├── visuals/    # Dashboard screenshots
+└── README.md   # Project documentation
+```
 
 
-## 📂 Repository Structure
+
+---
+
+## 🚀 Resume-Ready Description
+
+Designed and delivered a Power BI analytics model for hospital food-waste optimization.  
+Built a dynamic ordering system that identifies **20% waste reduction**, saving **~18,000 DKK annually**, using DAX modeling, scenario analysis, and cost-driver exploration.
+
+---
 
