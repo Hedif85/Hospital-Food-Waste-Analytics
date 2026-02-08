@@ -43,22 +43,19 @@ All data files are included in the `/data` folder.
 A dynamic ordering model based on patient count to reduce waste.
 
 
+## 📊 Power BI Dashboards
 
-## 📈 Power BI Dashboards
 
-### **1️⃣ Summary View**
-- Avg Food Waste  
-- Avg Optimized Food Waste  
-- Waste Reduction %  
-- Executive Summary Text  
+## 📈 Summary View 
 
-### **2️⃣ Analysis View**
-- Daily food & dairy waste trend  
-- Waste cost over time  
-- Waste by main driver  
-- Monthly waste cost  
-- Business insights  
+A high-level overview of key waste KPIs, comparing the current fixed-order system with the optimized dynamic model. <img src="https://github.com/user-attachments/assets/f20ced3d-9eaf-4adb-a399-d34c7af29a93" />
 
+## 📊 Analysis View  
+
+A detailed breakdown of daily food waste trends, cost drivers, and monthly waste patterns.  
+This view highlights operational inefficiencies and identifies the primary source of avoidable waste.
+
+<img src="https://github.com/user-attachments/assets/e88deeb1-930f-4774-bf08-40285c2dd9f0" />
 
 
 ## 🎯 Insights
